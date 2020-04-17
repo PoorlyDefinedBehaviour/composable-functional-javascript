@@ -1,20 +1,18 @@
 {
+  "parser": "babel-eslint",
   "env": {
     "browser": false,
-    "es6": true,
-    "jest": true
+    "es6": true
   },
   "extends": ["airbnb-base", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module"
   },
   "rules": {
-    "no-console": "off"
+    "no-unused-vars": [2, { "args": "all", "argsIgnorePattern": "^_" }],
+    "no-console": "off",
+    "no-unused-expressions": "off"
   }
 }
